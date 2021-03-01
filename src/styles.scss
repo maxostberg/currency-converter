@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
+@import './main-styles.scss';
+@import '../node_modules/bulma/bulma.sass';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    background-color: #686d76;
+    /* overflow: hidden !important; */
+}

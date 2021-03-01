@@ -1,0 +1,59 @@
+
+.currency-rates-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.base-title{
+    margin-top: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.card-image{
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.currency-card-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    margin-top: 2rem;
+    width: 60%;
+}
+
+.country-card{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    background-color: #eeeeee;
+    cursor: pointer;
+
+    .country-img{
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        background-color: teal;
+        height: 70%;
+    }
+
+    .card-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30%;
+        padding-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 816px){
+    .currency-card-container{
+        justify-content: center;
+    }
+}

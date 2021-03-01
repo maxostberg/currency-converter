@@ -1,0 +1,68 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .feedback-form{
+        margin-top: 2rem;
+    }
+}
+
+.name-container, .email-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.textaria-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.feedbackBtn{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    height: 2rem;
+    width: 5rem;
+    background-color: #a2d0c1;
+    cursor: pointer;
+}
+
+.feedbackBtn:hover{
+    border: 2px solid white;
+    background-color: #89afa2;
+}
+
+.submittedFeedback-container{
+    width: 15rem;
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+
+    label{
+        color: #89afa2;
+    }
+}
+
+input{
+    width: 15rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: none;
+}
+
+.red-class:focus{
+    outline: none;
+    border: 2px solid red;
+}
+
+.green-class:focus{
+    outline: none;
+    border: 2px solid green;
+}

@@ -1,0 +1,32 @@
+<div class="contact-container">
+    <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()" class="feedback-form">
+        <div class="name-container">
+            <label>Enter your name:</label>
+            <input type="text" name="nameInput" placeholder="Enter name" formControlName="nameInput" required [ngClass]="{'red-class': !feedbackForm.controls.nameInput?.valid, 'green-class': feedbackForm.controls.nameInput?.valid}">
+        </div>
+
+        <div class="email-container">
+            <label>Enter your Email:</label>
+            <input type="email" placeholder="Enter email" name="email" formControlName="email" required [ngClass]="{'red-class': !feedbackForm.controls.email?.valid, 'green-class': feedbackForm.controls.email?.valid}">
+        </div>
+
+        <div class="textaria-container">
+            <label>Enter feedback:</label>
+            <textarea name="feedback" cols="30" rows="10" formControlName="feedback"
+            [ngClass]="{'red-class': !feedbackForm.controls.nameInput?.valid, 'green-class': feedbackForm.controls.nameInput?.valid}"></textarea>
+        </div>
+
+        <button type="submit" class="feedbackBtn" [disabled]="!feedbackForm.valid">Send</button>
+    </form>
+
+    <div class="submittedFeedback-container" [hidden]="!submitted">
+        <label>Name:</label>
+        <p>{{feedbackForm.value.nameInput}}</p>
+
+        <label>Email:</label>
+        <p>{{feedbackForm.value.email}}</p>
+
+        <label>Feedback:</label>
+        <p>{{feedbackForm.value.feedback}}</p>
+    </div>
+</div>

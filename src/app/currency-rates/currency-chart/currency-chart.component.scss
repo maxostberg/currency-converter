@@ -1,0 +1,23 @@
+.rate-chart{
+    width: 30rem;
+    height: 15rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+}
+
+.chart-reset{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    height: 2rem;
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #a2d0c1;
+}
+
+.chart-reset:hover{
+    border: 2px solid white;
+    background-color: #89afa2;
+}

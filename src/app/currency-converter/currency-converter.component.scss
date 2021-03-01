@@ -1,0 +1,102 @@
+.currency-conv-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .calcForm{
+        display: flex;
+        margin-top: 3rem;
+        align-items: flex-end;
+
+        .valueInput{
+            margin-right: 1rem;
+            width: 10rem;
+            height: 2rem;
+            border-radius: 6px;
+            outline: 0;
+            border: none;
+            padding-left: 0.5rem;
+        }
+
+        .selection-container{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                color: white;
+            }
+
+            .selectEl{
+                width: 10rem;
+                height: 2rem;
+                border-style: none;
+                border-radius: 6px;
+                margin-right: 1rem;
+            }
+
+            .selectEl:focus{
+                border: none;
+                outline: none;
+            }
+        }
+
+    }
+
+    .calcBtn{
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        height: 2rem;
+        width: 5rem;
+        background-color: #a2d0c1;
+    }
+
+    .calcBtn:hover{
+        border: 2px solid white;
+        background-color: #89afa2;
+    }
+
+    .calculated-container{
+        color: #19d3da;
+        text-align: center;
+        margin-top: 2rem;
+        border: 2px solid white;
+        border-radius: 6px;
+        width: 40%;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 750px){
+    .calcForm{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .valueInput{
+        align-self: center;
+        width: 70px;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .selection-container{
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+
+    .calcBtn{
+        align-self: center;
+    }
+
+    .endValue{
+        font-size: 2rem;
+    }
+}

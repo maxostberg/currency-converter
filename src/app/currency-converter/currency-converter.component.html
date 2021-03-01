@@ -1,0 +1,28 @@
+<div class="currency-conv-container">
+    <form [formGroup]="calcForm" (ngSubmit)="calculateExchange()" class="calcForm">
+        <div class="selection-container">
+            <label>From:</label>
+            <select id="currency" (change)="onBaseCurrencySelect($event)" class="selectEl" formControlName="selectList">
+                <option [ngValue]="null" disabled>Choose</option>
+                <option *ngFor="let selection of selections" value="{{selection}}">{{selection}}</option>
+            </select>
+        </div>
+
+        <input type="number" placeholder="Enter value" formControlName="currencyAmount" class="valueInput">
+
+        <div class="selection-container">
+            <label>To:</label>
+            <select id="currency" (change)="onSecondCurrencySelect($event)" class="selectEl" formControlName="selectList">
+                <option [ngValue]="null" disabled>Choose</option>
+                <option *ngFor="let selection of selections" value="{{selection}}">{{selection}}</option>
+            </select>
+        </div>
+        <button type="submit" class="calcBtn">Calculate</button>
+    </form>
+
+    <div class="calculated-container" *ngIf="submitted">
+        <p>You get:</p>
+        <h2 class="endValue">{{exchangeEndVal}} {{selectedCurrencyName}}</h2>
+        <button class="calcBtn" (click)="reset()">Okay</button>
+    </div>
+</div>

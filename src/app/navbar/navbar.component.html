@@ -1,0 +1,28 @@
+<nav class="main-navigation">
+  <a class="logo-link" routerLink="/">
+    <img src="../../assets/images/exchange.png" alt="" class="logo">
+  </a>
+
+  <ul class="main-links">
+    <li class="navigation-item" routerLink="/currencyConv">Currency Converter</li>
+    <li class="navigation-item" routerLink="/currencyRates">Currency Rates</li>
+    <li class="navigation-item" routerLink="/contact">Contact</li>
+  </ul>
+
+  <div class="hamburger-menu">
+    <button class="hamburger hamburger--collapse hmbgMenu" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false" (click)="toggleCollapse()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+</nav>
+
+<div id="navigation" [@collapse]="isOpen" class="hmbgNavLinks-container">
+  <ul class="hmbgNavLinks">
+    <li class="hmbg-item item-one" routerLink="/currencyConv">Currency Converter</li>
+    <li class="hmbg-item item-two" routerLink="/currencyRates">Currency Rates</li>
+    <li class="hmbg-item item-three" routerLink="/contact">Contact</li>
+  </ul>
+</div>
+

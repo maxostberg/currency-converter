@@ -1,0 +1,18 @@
+<div class="currency-rates-container">
+    <h2 class="base-title">Base Currency: Euro</h2>
+    <div class="currency-card-container">
+        
+        <div class="country-card {{card.name}}" *ngFor="let card of countryCards" (click)="chart.initializeChart($event)">
+            <div class="country-img {{card.name}}">
+                <img src="{{card.img}}" alt="sweden" class="card-image {{card.name}}">
+            </div>
+    
+            <div class="card-info {{card.name}}">
+                <p>Rate: {{card.rate}}</p>
+                <p>Date: {{card.date}}</p>
+            </div>
+        </div>
+    </div>
+    <app-currency-chart #chart></app-currency-chart>
+</div>
+

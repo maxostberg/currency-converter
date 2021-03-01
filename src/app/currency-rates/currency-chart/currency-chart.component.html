@@ -1,0 +1,12 @@
+<div style="display: block;" class="rate-chart" *ngIf="showChart === true">
+  <canvas baseChart
+    [datasets]="lineChartData"
+    [labels]="lineChartLabels"
+    [options]="lineChartOptions"
+    [colors]="lineChartColors"
+    [legend]="lineChartLegend"
+    [chartType]="lineChartType"
+    [plugins]="lineChartPlugins">
+  </canvas>
+  <button class="chart-reset" (click)="reset()">Check Another Rate</button>
+</div>
